@@ -11,7 +11,7 @@
     "declaration": true,
     "rootDir": "src",
     "outDir": "dist",
-    "paths": { "@jnpl/elements-ui/*": ["./src/*"] }
+    "paths": { "@jnpll/elements-ui/*": ["./src/*"] }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

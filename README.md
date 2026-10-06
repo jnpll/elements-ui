@@ -15,28 +15,36 @@ The build emits ESM JavaScript and declarations into `dist`, preserving per-file
 
 ## Consume
 
-For the sibling Elements app, run `npm install` in this package, build it, then
-run `npm install` in `../elements`. Elements already declares `file:../elements-ui`.
+For the sibling portfolio app, run `npm install` in this package, build it, then
+run `npm install` in `../jnpl`. Both `jnpl` and the `elements` documentation app
+declare `file:../elements-ui`.
 Rebuild this package after changing its source.
 
-The initial local verification used a `node_modules` symlink to Elements' installed
-dependencies because the npm registry could not be reached. Before installing
-this package independently, remove that symlink with `unlink node_modules`, then
-run `npm install`. This does not remove Elements' dependencies.
+For a registry installation, add `@jnpll:registry=https://npm.pkg.github.com`
+to your app's `.npmrc`, authenticate with a classic personal access token that
+has `read:packages`, then install the version you want:
+
+```sh
+npm login --scope=@jnpll --auth-type=legacy --registry=https://npm.pkg.github.com
+npm install @jnpll/elements-ui@0.1.0
+```
+
+Keep credentials in your local npm configuration or CI secrets, not in source.
+GitHub Packages requires authentication even for public npm packages.
 
 ```tsx
-import { Button } from "@jnpl/elements-ui/button";
-import { GlassPanel } from "@jnpl/elements-ui/glass-panel";
-import { cn } from "@jnpl/elements-ui/utils";
+import { Button } from "@jnpll/elements-ui/button";
+import { GlassPanel } from "@jnpll/elements-ui/glass-panel";
+import { cn } from "@jnpll/elements-ui/utils";
 ```
 
 In the consuming app's global stylesheet:
 
 ```css
 @import "tailwindcss";
-@import "@jnpl/elements-ui/styles.css";
+@import "@jnpll/elements-ui/styles.css";
 
-@source "../../node_modules/@jnpl/elements-ui/dist";
+@source "../../node_modules/@jnpll/elements-ui/dist";
 ```
 
 Adjust `@source` relative to that stylesheet. The package includes animation and
@@ -48,7 +56,7 @@ supplies semantic colors, radius values, base colors, glass surfaces, gradient t
 and eyebrow text. Load fonts in the app and expose `--elements-font-sans` and
 `--elements-font-mono`; system fonts are used when these are absent.
 
-Elements keeps its existing theme preference provider, font loading, scrolling,
+The `jnpl` portfolio keeps its existing theme preference provider, font loading, scrolling,
 prism layout, avatar effects, and print styles locally. Its old UI paths re-export
 this package so existing imports continue working.
 
@@ -57,10 +65,22 @@ this package so existing imports continue working.
 Run the shadcn CLI from this package, using its `base-nova` configuration. After
 adding a component, use relative internal imports with `.js` extensions, add it
 to `src/index.ts`, and install any required runtime dependencies here. Exported
-component files are available as `@jnpl/elements-ui/<name>` after building.
+component files are available as `@jnpll/elements-ui/<name>` after building.
 
 ## Release
 
-`npm pack` builds the package before creating a tarball. Publishing and registry
-authentication are not configured yet; choose npm or GitHub Packages before
-publishing. The sibling folder can become its own Git repository.
+`npm pack` builds the package before creating a tarball. The publish registry is
+GitHub Packages, linked to https://github.com/jnpll/elements-ui.
+
+The Publish package workflow installs from the lockfile, typechecks, and publishes
+with the repository's `GITHUB_TOKEN`. It runs on `v*` tags or manual dispatch.
+To release a new version from a clean checkout:
+
+```sh
+npm version patch
+git push origin main --follow-tags
+```
+
+Each package version can only be published once. See
+https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry
+for authentication and visibility settings.

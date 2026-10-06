@@ -13,11 +13,11 @@
   "iconLibrary": "lucide",
   "rtl": false,
   "aliases": {
-    "components": "@jnpl/elements-ui/components",
-    "utils": "@jnpl/elements-ui/lib/utils",
-    "ui": "@jnpl/elements-ui/components",
-    "lib": "@jnpl/elements-ui/lib",
-    "hooks": "@jnpl/elements-ui/hooks"
+    "components": "@jnpll/elements-ui/components",
+    "utils": "@jnpll/elements-ui/lib/utils",
+    "ui": "@jnpll/elements-ui/components",
+    "lib": "@jnpll/elements-ui/lib",
+    "hooks": "@jnpll/elements-ui/hooks"
   },
   "menuColor": "default",
   "menuAccent": "subtle",
