@@ -23,6 +23,9 @@
       "import": "./dist/index.js"
     },
     "./styles.css": "./dist/styles.css",
+    "./collections/alpha/theme.json": "./dist/collections/alpha/theme.json",
+    "./collections/alpha/theme.css": "./dist/collections/alpha/theme.css",
+    "./collections/alpha/palettes/neutral.css": "./dist/collections/alpha/palettes/neutral.css",
     "./utils": {
       "types": "./dist/lib/utils.d.ts",
       "import": "./dist/lib/utils.js"

@@ -14,4 +14,18 @@ const root = await import("@jnpll/elements-ui");
 assert.ok(root.Button && root.Dialog && root.Calendar && root.ChartContainer && root.toast);
 const hooks = await import("@jnpll/elements-ui/hooks/use-mobile");
 assert.equal(typeof hooks.useIsMobile, "function");
+const alpha = JSON.parse(await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/alpha/theme.json")), "utf8"));
+assert.equal(alpha.id, "alpha");
+assert.equal(alpha.defaultPalette, "neutral");
+assert.ok(alpha.palettes.some(palette => palette.id === alpha.defaultPalette));
+for (const palette of alpha.palettes) {
+  const css = await readFile(new URL(import.meta.resolve(palette.stylesheet)), "utf8");
+  assert.match(css, /:root\s*\{/);
+  assert.match(css, /\.dark\s*\{/);
+  const [light, dark] = css.split(".dark {");
+  const tokens = source => [...source.matchAll(/(--[\w-]+):/g)].map(match => match[1]).sort();
+  assert.deepEqual(tokens(light), tokens(dark), "Palette modes must define the same semantic tokens");
+  assert.ok(!css.includes("--radius:"), "Palettes must not change theme geometry");
+}
+await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/alpha/theme.css")), "utf8");
 console.log(`Verified ${files.length} component exports, type declarations, root exports, and hooks.`);
