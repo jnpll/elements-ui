@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "paths": { "@jnpl/elements-ui/*": ["./src/*"] }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}
