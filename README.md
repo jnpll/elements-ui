@@ -26,7 +26,7 @@ has `read:packages`, then install the version you want:
 
 ```sh
 npm login --scope=@jnpll --auth-type=legacy --registry=https://npm.pkg.github.com
-npm install @jnpll/elements-ui@0.1.0
+npm install @jnpll/elements-ui@0.2.0
 ```
 
 Keep credentials in your local npm configuration or CI secrets, not in source.
@@ -61,6 +61,27 @@ prism layout, avatar effects, and print styles locally. Its old UI paths re-expo
 this package so existing imports continue working.
 
 ## Add components
+
+The library contains 55 component modules. Alongside the original Button, Badge,
+Card, GlassPanel, Tabs, Tooltip, Separator, and ScrollArea, it now includes:
+
+- Forms: Input, Textarea, Checkbox, RadioGroup, Switch, Select, NativeSelect,
+  Combobox, Slider, InputOTP, InputGroup, Field, and Label.
+- Overlays: Dialog, AlertDialog, Sheet, Drawer, Popover, HoverCard, DropdownMenu,
+  ContextMenu, and Menubar.
+- Navigation: Accordion, Collapsible, Breadcrumb, NavigationMenu, Pagination,
+  Sidebar, and Command.
+- Display and layout: Avatar, AspectRatio, Carousel, Chart, Table, Resizable,
+  Calendar, Item, and ButtonGroup.
+- Feedback and actions: Alert, Empty, Progress, Skeleton, Spinner, Kbd, Toggle,
+  ToggleGroup, and Sonner notifications.
+
+`Toaster` accepts a `theme` prop and does not require a Next.js theme provider.
+Mount one Toaster per application and import `toast` from the same package export.
+The expanded set is included starting with version 0.2.0.
+
+`npm test` builds and checks every public component export and declaration.
+Live examples are in the sibling `elements` documentation application.
 
 Run the shadcn CLI from this package, using its `base-nova` configuration. After
 adding a component, use relative internal imports with `.js` extensions, add it
