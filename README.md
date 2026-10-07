@@ -26,7 +26,7 @@ has `read:packages`, then install the version you want:
 
 ```sh
 npm login --scope=@jnpll --auth-type=legacy --registry=https://npm.pkg.github.com
-npm install @jnpll/elements-ui@0.3.0
+npm install @jnpll/elements-ui@0.3.1
 ```
 
 Keep credentials in your local npm configuration or CI secrets, not in source.
@@ -40,6 +40,9 @@ import { cn } from "@jnpll/elements-ui/utils";
 
 Theme icons are exported as typed SVG data URLs; no SVG loader or public-file
 copying is required. Use them in an image or a current-color CSS mask:
+
+`alphaIcon` uses `src/assets/icons/la/atom.svg` starting in 0.3.1. The public
+export name and `icons/alpha.svg` asset path remain stable.
 
 ```tsx
 import { alphaIcon, crown2BoldIcon } from "@jnpll/elements-ui/icons";

@@ -1,6 +1,6 @@
 {
   "name": "@jnpll/elements-ui",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Shared Elements shadcn components and Tailwind CSS 4 theme",
   "type": "module",
   "repository": {

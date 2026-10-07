@@ -1,21 +1,9 @@
-# Third-Party Notices
-
-## Theme icons
-
-- `alpha.svg`: the Atom icon from Icons8 Line Awesome, MIT.
-  Source: https://github.com/icons8/line-awesome
-- `crown-2-bold.svg`: Glyphs by Goran Spasojevic, MIT.
-  Source: https://github.com/gorango/glyphs
-
-Full icon license texts are included in `LICENSES/`.
-
-## Components
-
-Components are adapted from shadcn/ui (https://github.com/shadcn-ui/ui).
+Icons8 Line Awesome, distributed under the upstream MIT license option.
+Source: https://github.com/icons8/line-awesome/blob/master/LICENSE.md
 
 MIT License
 
-Copyright (c) 2023 shadcn
+Copyright Icons8
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

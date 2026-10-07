@@ -12,7 +12,7 @@ for (const file of files) {
 }
 const root = await import("@jnpll/elements-ui");
 const icons = await import("@jnpll/elements-ui/icons");
-for (const [name, file, source] of [["alphaIcon", "alpha.svg", "mdi/alpha.svg"], ["crown2BoldIcon", "crown-2-bold.svg", "glyphs/crown-2-bold.svg"]]) {
+for (const [name, file, source] of [["alphaIcon", "alpha.svg", "la/atom.svg"], ["crown2BoldIcon", "crown-2-bold.svg", "glyphs/crown-2-bold.svg"]]) {
   const original = await readFile(new URL(`../src/assets/icons/${source}`, import.meta.url), "utf8");
   const exported = await readFile(new URL(import.meta.resolve(`@jnpll/elements-ui/icons/${file}`)), "utf8");
   assert.equal(exported, original);
