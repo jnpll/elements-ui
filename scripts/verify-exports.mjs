@@ -11,6 +11,14 @@ for (const file of files) {
   await readFile(new URL(`../dist/components/${file.slice(0, -3)}.d.ts`, import.meta.url));
 }
 const root = await import("@jnpll/elements-ui");
+const icons = await import("@jnpll/elements-ui/icons");
+for (const [name, file, source] of [["alphaIcon", "alpha.svg", "mdi/alpha.svg"], ["crown2BoldIcon", "crown-2-bold.svg", "glyphs/crown-2-bold.svg"]]) {
+  const original = await readFile(new URL(`../src/assets/icons/${source}`, import.meta.url), "utf8");
+  const exported = await readFile(new URL(import.meta.resolve(`@jnpll/elements-ui/icons/${file}`)), "utf8");
+  assert.equal(exported, original);
+  assert.equal(decodeURIComponent(icons[name].split(",").slice(1).join(",")), original.trim());
+}
+await readFile(new URL("../dist/icons.d.ts", import.meta.url));
 assert.ok(root.Button && root.Dialog && root.Calendar && root.ChartContainer && root.toast);
 const hooks = await import("@jnpll/elements-ui/hooks/use-mobile");
 assert.equal(typeof hooks.useIsMobile, "function");
@@ -28,4 +36,19 @@ for (const palette of alpha.palettes) {
   assert.ok(!css.includes("--radius:"), "Palettes must not change theme geometry");
 }
 await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/alpha/theme.css")), "utf8");
+const britanniae = JSON.parse(await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/britanniae/theme.json")), "utf8"));
+assert.equal(britanniae.palettes.length, 7);
+assert.deepEqual(britanniae.palettes.map(palette => palette.element), [2, 10, 18, 36, 54, 86, 118]);
+const tokenNames = source => [...source.matchAll(/(--[\w-]+):/g)].map(match => match[1]).sort();
+const alphaCSS = await readFile(new URL(import.meta.resolve(alpha.palettes[0].stylesheet)), "utf8");
+const expectedTokens = tokenNames(alphaCSS.split(".dark {")[0]);
+for (const palette of britanniae.palettes) {
+  const css = await readFile(new URL(import.meta.resolve(palette.stylesheet)), "utf8");
+  const [light, dark] = css.split(/:root[^\n]+\.dark\s*\{/);
+  assert.ok(dark, `${palette.id} must support dark mode`);
+  assert.deepEqual(tokenNames(light), expectedTokens);
+  assert.deepEqual(tokenNames(dark), expectedTokens);
+  assert.ok(!css.includes("--radius:"), "Palettes must not change geometry");
+}
+await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/britanniae/theme.css")), "utf8");
 console.log(`Verified ${files.length} component exports, type declarations, root exports, and hooks.`);

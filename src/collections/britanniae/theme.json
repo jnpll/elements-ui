@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "britanniae",
+  "name": "Britanniae",
+  "defaultPalette": "arthur",
+  "design": {
+    "baseRadius": "0.25rem",
+    "spacingUnit": "0.25rem",
+    "typography": {
+      "heading": "Georgia, \"Times New Roman\", serif",
+      "sans": "Arial, Helvetica, sans-serif"
+    },
+    "states": [
+      "default",
+      "hover",
+      "focus-visible",
+      "active",
+      "disabled",
+      "invalid"
+    ],
+    "primitives": "Semantic HTML and Base UI; crisp corners and fine inset borders."
+  },
+  "palettes": [
+    {
+      "id": "arthur",
+      "name": "Arthur",
+      "element": 2,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/arthur.css"
+    },
+    {
+      "id": "guinevere",
+      "name": "Guinevere",
+      "element": 10,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/guinevere.css"
+    },
+    {
+      "id": "merlin",
+      "name": "Merlin",
+      "element": 18,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/merlin.css"
+    },
+    {
+      "id": "mordred",
+      "name": "Mordred",
+      "element": 36,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/mordred.css"
+    },
+    {
+      "id": "percival",
+      "name": "Percival",
+      "element": 54,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/percival.css"
+    },
+    {
+      "id": "lancelot",
+      "name": "Lancelot",
+      "element": 86,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/lancelot.css"
+    },
+    {
+      "id": "galahad",
+      "name": "Galahad",
+      "element": 118,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/galahad.css"
+    }
+  ]
+}

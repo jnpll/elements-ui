@@ -1,0 +1,76 @@
+/* Britanniae / Lancelot: color only; geometry belongs to the theme. */
+:root[data-elements-theme="britanniae"][data-elements-palette="lancelot"] {
+  --background: #fbfcff;
+  --foreground: #20232a;
+  --card: #ffffff;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #285b8d;
+  --primary-foreground: #ffffff;
+  --secondary: color-mix(in srgb, #285b8d, white 92%);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: #555b66;
+  --accent: color-mix(in srgb, #3d6c9a, white 90%);
+  --accent-foreground: var(--foreground);
+  --destructive: #ae2638;
+  --border: rgb(25 30 40 / 20%);
+  --input: var(--border);
+  --ring: #285b8d;
+  --chart-1: var(--primary);
+  --chart-2: #3d6c9a;
+  --chart-3: #68788d;
+  --chart-4: #87998e;
+  --chart-5: #9c856b;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --glow-cyan: var(--primary);
+  --glow-blue: #3d6c9a;
+  --glow-violet: var(--primary);
+  --glow-magenta: #3d6c9a;
+}
+
+:root[data-elements-theme="britanniae"][data-elements-palette="lancelot"].dark {
+  --background: #182536;
+  --foreground: #f5f4f7;
+  --card: color-mix(in srgb, #182536, white 5%);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #9dbfdf;
+  --primary-foreground: #182536;
+  --secondary: color-mix(in srgb, #182536, white 12%);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: #c0c3cd;
+  --accent: color-mix(in srgb, #3d6c9a, #182536 65%);
+  --accent-foreground: var(--foreground);
+  --destructive: #ffa6a6;
+  --border: rgb(255 255 255 / 22%);
+  --input: var(--border);
+  --ring: #9dbfdf;
+  --chart-1: var(--primary);
+  --chart-2: #9dbfdf;
+  --chart-3: #a5b4c6;
+  --chart-4: #c9c4d2;
+  --chart-5: #e0ddd5;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --glow-cyan: var(--primary);
+  --glow-blue: #9dbfdf;
+  --glow-violet: var(--primary);
+  --glow-magenta: #9dbfdf;
+}

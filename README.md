@@ -17,7 +17,7 @@ The build emits ESM JavaScript and declarations into `dist`, preserving per-file
 
 For the sibling portfolio app, run `npm install` in this package, build it, then
 run `npm install` in `../jnpl`. Both `jnpl` and the `elements` documentation app
-declare `file:../elements-ui`.
+The portfolio uses `file:../elements-ui`; the docs app installs the published GitHub package.
 Rebuild this package after changing its source.
 
 For a registry installation, add `@jnpll:registry=https://npm.pkg.github.com`
@@ -26,7 +26,7 @@ has `read:packages`, then install the version you want:
 
 ```sh
 npm login --scope=@jnpll --auth-type=legacy --registry=https://npm.pkg.github.com
-npm install @jnpll/elements-ui@0.2.0
+npm install @jnpll/elements-ui@0.3.0
 ```
 
 Keep credentials in your local npm configuration or CI secrets, not in source.
@@ -37,6 +37,20 @@ import { Button } from "@jnpll/elements-ui/button";
 import { GlassPanel } from "@jnpll/elements-ui/glass-panel";
 import { cn } from "@jnpll/elements-ui/utils";
 ```
+
+Theme icons are exported as typed SVG data URLs; no SVG loader or public-file
+copying is required. Use them in an image or a current-color CSS mask:
+
+```tsx
+import { alphaIcon, crown2BoldIcon } from "@jnpll/elements-ui/icons";
+
+<span style={{ maskImage: `url("${alphaIcon}")`, background: "currentColor", width: 24, height: 24 }} />
+```
+
+Raw SVGs are also available at `@jnpll/elements-ui/icons/alpha.svg` and
+`@jnpll/elements-ui/icons/crown-2-bold.svg` for bundlers with asset support.
+The source SVGs remain in `src/assets/icons`; the build generates the published
+assets and URL exports. Only these two supported icons are included in this release.
 
 In the consuming app's global stylesheet:
 

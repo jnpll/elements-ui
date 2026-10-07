@@ -1,0 +1,30 @@
+@import "./palettes/arthur.css";
+@import "./palettes/guinevere.css";
+@import "./palettes/merlin.css";
+@import "./palettes/mordred.css";
+@import "./palettes/percival.css";
+@import "./palettes/lancelot.css";
+@import "./palettes/galahad.css";
+
+:root[data-elements-theme="britanniae"] {
+  --radius: 0.25rem;
+  --elements-font-sans: Arial, Helvetica, sans-serif;
+  --elements-font-mono: "SFMono-Regular", Consolas, monospace;
+  --elements-font-heading: Georgia, "Times New Roman", serif;
+}
+[data-elements-theme="britanniae"] :is(h1, h2, h3, [data-slot="card-title"]) {
+  font-family: var(--elements-font-heading);
+  font-weight: 500;
+}
+[data-elements-theme="britanniae"] :is([data-slot="button"], [data-slot="input"], [data-slot="select-trigger"], [data-slot="tabs-list"], [data-slot="badge"]) {
+  border-radius: 3px;
+}
+[data-elements-theme="britanniae"] :is([data-slot="button"], [data-slot="input"], [data-slot="select-trigger"]) {
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+[data-elements-theme="britanniae"] :is([data-slot="card"], .example-tabs, .code-block, .side-link, .search-box) {
+  border-radius: 4px;
+}
+[data-elements-theme="britanniae"] .site-header {
+  box-shadow: inset 0 -3px 0 var(--accent);
+}

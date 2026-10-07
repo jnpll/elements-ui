@@ -1,0 +1,76 @@
+/* Britanniae / Percival: color only; geometry belongs to the theme. */
+:root[data-elements-theme="britanniae"][data-elements-palette="percival"] {
+  --background: #fcfcfd;
+  --foreground: #20232a;
+  --card: #ffffff;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #505963;
+  --primary-foreground: #ffffff;
+  --secondary: color-mix(in srgb, #505963, white 92%);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: #555b66;
+  --accent: color-mix(in srgb, #59636e, white 90%);
+  --accent-foreground: var(--foreground);
+  --destructive: #ae2638;
+  --border: rgb(25 30 40 / 20%);
+  --input: var(--border);
+  --ring: #505963;
+  --chart-1: var(--primary);
+  --chart-2: #59636e;
+  --chart-3: #68788d;
+  --chart-4: #87998e;
+  --chart-5: #9c856b;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --glow-cyan: var(--primary);
+  --glow-blue: #59636e;
+  --glow-violet: var(--primary);
+  --glow-magenta: #59636e;
+}
+
+:root[data-elements-theme="britanniae"][data-elements-palette="percival"].dark {
+  --background: #20252c;
+  --foreground: #f5f4f7;
+  --card: color-mix(in srgb, #20252c, white 5%);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #c6cbd2;
+  --primary-foreground: #20252c;
+  --secondary: color-mix(in srgb, #20252c, white 12%);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: #c0c3cd;
+  --accent: color-mix(in srgb, #59636e, #20252c 65%);
+  --accent-foreground: var(--foreground);
+  --destructive: #ffa6a6;
+  --border: rgb(255 255 255 / 22%);
+  --input: var(--border);
+  --ring: #c6cbd2;
+  --chart-1: var(--primary);
+  --chart-2: #c6cbd2;
+  --chart-3: #a5b4c6;
+  --chart-4: #c9c4d2;
+  --chart-5: #e0ddd5;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --glow-cyan: var(--primary);
+  --glow-blue: #c6cbd2;
+  --glow-violet: var(--primary);
+  --glow-magenta: #c6cbd2;
+}
