@@ -16,8 +16,8 @@ The build emits ESM JavaScript and declarations into `dist`, preserving per-file
 ## Consume
 
 For the sibling portfolio app, run `npm install` in this package, build it, then
-run `npm install` in `../jnpl`. Both `jnpl` and the `elements` documentation app
-The portfolio uses `file:../elements-ui`; the docs app installs the published GitHub package.
+run `npm install` in `../jnpl`. The portfolio uses `file:../elements-ui`;
+the `elements` documentation app installs the published GitHub package.
 Rebuild this package after changing its source.
 
 For a registry installation, add `@jnpll:registry=https://npm.pkg.github.com`
