@@ -31,10 +31,6 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
-  --glow-cyan: var(--primary);
-  --glow-blue: #3d6c9a;
-  --glow-violet: var(--primary);
-  --glow-magenta: #3d6c9a;
 }
 
 :root[data-elements-theme="britanniae"][data-elements-palette="lancelot"].dark {
@@ -44,7 +40,7 @@
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: #9dbfdf;
+  --primary: #e1be67;
   --primary-foreground: #182536;
   --secondary: color-mix(in srgb, #182536, white 12%);
   --secondary-foreground: var(--foreground);
@@ -55,7 +51,7 @@
   --destructive: #ffa6a6;
   --border: rgb(255 255 255 / 22%);
   --input: var(--border);
-  --ring: #9dbfdf;
+  --ring: #e1be67;
   --chart-1: var(--primary);
   --chart-2: #9dbfdf;
   --chart-3: #a5b4c6;
@@ -69,8 +65,4 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
-  --glow-cyan: var(--primary);
-  --glow-blue: #9dbfdf;
-  --glow-violet: var(--primary);
-  --glow-magenta: #9dbfdf;
 }

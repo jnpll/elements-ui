@@ -37,12 +37,6 @@
   --sidebar-accent-foreground: oklch(0.17 0 0);
   --sidebar-border: oklch(0 0 0 / 10%);
   --sidebar-ring: oklch(0 0 0 / 40%);
-
-  /* Monochrome accent ramp (gradient text / subtle glows). Dark greys on light. */
-  --glow-cyan: #202024;
-  --glow-blue: #3c3c42;
-  --glow-violet: #29292e;
-  --glow-magenta: #47474e;
 }
 
 .dark {
@@ -83,8 +77,4 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(1 0 0 / 40%);
 
-  --glow-cyan: #ffffff;
-  --glow-blue: #d4d4d8;
-  --glow-violet: #ededf0;
-  --glow-magenta: #c2c2c8;
 }

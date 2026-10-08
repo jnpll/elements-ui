@@ -31,10 +31,6 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
-  --glow-cyan: var(--primary);
-  --glow-blue: #81559c;
-  --glow-violet: var(--primary);
-  --glow-magenta: #81559c;
 }
 
 :root[data-elements-theme="britanniae"][data-elements-palette="guinevere"].dark {
@@ -69,8 +65,4 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
-  --glow-cyan: var(--primary);
-  --glow-blue: #d5b4ed;
-  --glow-violet: var(--primary);
-  --glow-magenta: #d5b4ed;
 }

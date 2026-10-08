@@ -1,10 +1,11 @@
 import { copyFile, cp, mkdir, readFile, writeFile } from "node:fs/promises";
 
 await copyFile(new URL("../src/styles.css", import.meta.url), new URL("../dist/styles.css", import.meta.url));
+await copyFile(new URL("../src/themes.css", import.meta.url), new URL("../dist/themes.css", import.meta.url));
 await cp(new URL("../src/collections", import.meta.url), new URL("../dist/collections", import.meta.url), { recursive: true });
 
 const icons = [
-  { name: "alphaIcon", source: "la/atom.svg", file: "alpha.svg" },
+  { name: "alphaIcon", source: "token/atomic.svg", file: "alpha.svg" },
   { name: "crown2BoldIcon", source: "glyphs/crown-2-bold.svg", file: "crown-2-bold.svg" },
 ];
 await mkdir(new URL("../dist/icons/", import.meta.url), { recursive: true });

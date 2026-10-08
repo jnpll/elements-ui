@@ -7,7 +7,7 @@
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: #303030;
+  --primary: #702638;
   --primary-foreground: #ffffff;
   --secondary: #eeeeee;
   --secondary-foreground: var(--foreground);
@@ -18,7 +18,7 @@
   --destructive: #ae2638;
   --border: rgb(0 0 0 / 20%);
   --input: var(--border);
-  --ring: #303030;
+  --ring: #702638;
   --chart-1: var(--primary);
   --chart-2: #888888;
   --chart-3: #777777;
@@ -32,10 +32,6 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
-  --glow-cyan: var(--primary);
-  --glow-blue: #888888;
-  --glow-violet: var(--primary);
-  --glow-magenta: #888888;
 }
 
 :root[data-elements-theme="britanniae"][data-elements-palette="mordred"].dark {
@@ -46,8 +42,8 @@
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: #e4e4e4;
-  --primary-foreground: #101010;
+  --primary: #a34860;
+  --primary-foreground: #ffffff;
   --secondary: color-mix(in srgb, #101010, white 12%);
   --secondary-foreground: var(--foreground);
   --muted: var(--secondary);
@@ -57,7 +53,7 @@
   --destructive: #ffa6a6;
   --border: rgb(255 255 255 / 22%);
   --input: var(--border);
-  --ring: #e4e4e4;
+  --ring: #a34860;
   --chart-1: var(--primary);
   --chart-2: #e4e4e4;
   --chart-3: #aaaaaa;
@@ -71,8 +67,4 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
-  --glow-cyan: var(--primary);
-  --glow-blue: #e4e4e4;
-  --glow-violet: var(--primary);
-  --glow-magenta: #e4e4e4;
 }
