@@ -1,0 +1,68 @@
+/* Pantheon / Osiris: semantic colors; geometry belongs to the theme. */
+:root[data-elements-theme="pantheon"][data-elements-palette="osiris"] {
+  --background: #f6fbfa;
+  --foreground: #214840;
+  --card: color-mix(in srgb, #f6fbfa, white 75%);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #2d7669;
+  --primary-foreground: #ffffff;
+  --secondary: color-mix(in srgb, #2d7669, white 90%);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: color-mix(in srgb, #214840, white 30%);
+  --accent: color-mix(in srgb, #79b5a5, white 84%);
+  --accent-foreground: var(--foreground);
+  --destructive: #a93642;
+  --border: color-mix(in srgb, #214840, transparent 78%);
+  --input: var(--border);
+  --ring: #2d7669;
+  --chart-1: var(--primary);
+  --chart-2: #79b5a5;
+  --chart-3: #7390a0;
+  --chart-4: #8a9d82;
+  --chart-5: #a68b80;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+:root[data-elements-theme="pantheon"][data-elements-palette="osiris"].dark {
+  --background: #102320;
+  --foreground: #f6f4f3;
+  --card: color-mix(in srgb, #102320, white 6%);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #a2e4ce;
+  --primary-foreground: #102320;
+  --secondary: color-mix(in srgb, #102320, #a2e4ce 17%);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: color-mix(in srgb, #f6f4f3, #102320 30%);
+  --accent: color-mix(in srgb, #102320, #5cae98 22%);
+  --accent-foreground: var(--foreground);
+  --destructive: #ff9aa3;
+  --border: color-mix(in srgb, #f6f4f3, transparent 72%);
+  --input: var(--border);
+  --ring: #a2e4ce;
+  --chart-1: var(--primary);
+  --chart-2: #5cae98;
+  --chart-3: #a1bfd1;
+  --chart-4: #b0ca9d;
+  --chart-5: #d1ad9f;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}

@@ -1,14 +1,13 @@
 @import "./palettes/arthur.css";
 @import "./palettes/guinevere.css";
 @import "./palettes/merlin.css";
-@import "./palettes/mordred.css";
 @import "./palettes/percival.css";
 @import "./palettes/lancelot.css";
 @import "./palettes/galahad.css";
 
 :root[data-elements-theme="britanniae"] {
   --radius: 0.25rem;
-  --elements-font-sans: Arial, Helvetica, sans-serif;
+  --elements-font-sans: Georgia, "Times New Roman", serif;
   --elements-font-mono: "SFMono-Regular", Consolas, monospace;
   --elements-font-heading: Georgia, "Times New Roman", serif;
 }

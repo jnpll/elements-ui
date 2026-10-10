@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "cosmo",
+  "name": "Cosmo",
+  "defaultPalette": "astral",
+  "design": {
+    "baseRadius": "1rem",
+    "spacingUnit": "0.25rem",
+    "typography": {
+      "heading": "Space Grotesk, Avenir Next, Arial, sans-serif",
+      "sans": "Space Grotesk, Avenir Next, Arial, sans-serif",
+      "mono": "JetBrains Mono, SFMono-Regular, Consolas, monospace"
+    },
+    "states": [
+      "default",
+      "hover",
+      "focus-visible",
+      "active",
+      "disabled",
+      "invalid"
+    ],
+    "primitives": "Semantic HTML and Base UI; geometric headings, mono labels, rounded controls, translucent panels, and an optional full-viewport WebGL backdrop using the jnpl shader."
+  },
+  "palettes": [
+    {
+      "id": "astral",
+      "name": "Astral",
+      "element": 2,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/cosmo/palettes/astral.css"
+    },
+    {
+      "id": "solar",
+      "name": "Solar",
+      "element": 10,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/cosmo/palettes/solar.css"
+    },
+    {
+      "id": "lunar",
+      "name": "Lunar",
+      "element": 18,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/cosmo/palettes/lunar.css"
+    },
+    {
+      "id": "nebular",
+      "name": "Nebular",
+      "element": 36,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/cosmo/palettes/nebular.css"
+    },
+    {
+      "id": "quasar",
+      "name": "Quasar",
+      "element": 54,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/cosmo/palettes/quasar.css"
+    },
+    {
+      "id": "pulsar",
+      "name": "Pulsar",
+      "element": 86,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/cosmo/palettes/pulsar.css"
+    },
+    {
+      "id": "stellar",
+      "name": "Stellar",
+      "element": 118,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/cosmo/palettes/stellar.css"
+    }
+  ]
+}

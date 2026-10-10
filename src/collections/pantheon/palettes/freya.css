@@ -1,0 +1,68 @@
+/* Pantheon / Freya: semantic colors; geometry belongs to the theme. */
+:root[data-elements-theme="pantheon"][data-elements-palette="freya"] {
+  --background: #fff8f9;
+  --foreground: #552c3c;
+  --card: color-mix(in srgb, #fff8f9, white 75%);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #a24f70;
+  --primary-foreground: #ffffff;
+  --secondary: color-mix(in srgb, #a24f70, white 90%);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: color-mix(in srgb, #552c3c, white 30%);
+  --accent: color-mix(in srgb, #dfa0b4, white 84%);
+  --accent-foreground: var(--foreground);
+  --destructive: #a93642;
+  --border: color-mix(in srgb, #552c3c, transparent 78%);
+  --input: var(--border);
+  --ring: #a24f70;
+  --chart-1: var(--primary);
+  --chart-2: #dfa0b4;
+  --chart-3: #7390a0;
+  --chart-4: #8a9d82;
+  --chart-5: #a68b80;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+:root[data-elements-theme="pantheon"][data-elements-palette="freya"].dark {
+  --background: #281821;
+  --foreground: #f6f4f3;
+  --card: color-mix(in srgb, #281821, white 6%);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #ffc0d5;
+  --primary-foreground: #281821;
+  --secondary: color-mix(in srgb, #281821, #ffc0d5 17%);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: color-mix(in srgb, #f6f4f3, #281821 30%);
+  --accent: color-mix(in srgb, #281821, #d787a6 22%);
+  --accent-foreground: var(--foreground);
+  --destructive: #ff9aa3;
+  --border: color-mix(in srgb, #f6f4f3, transparent 72%);
+  --input: var(--border);
+  --ring: #ffc0d5;
+  --chart-1: var(--primary);
+  --chart-2: #d787a6;
+  --chart-3: #a1bfd1;
+  --chart-4: #b0ca9d;
+  --chart-5: #d1ad9f;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}

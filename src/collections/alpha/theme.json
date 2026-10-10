@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "alpha",
   "name": "Alpha",
-  "defaultPalette": "neutral",
+  "defaultPalette": "base",
   "design": {
     "baseRadius": "0.75rem",
     "radiusScale": { "sm": 0.6, "md": 0.8, "lg": 1, "xl": 1.4 },
@@ -12,5 +12,5 @@
     "states": ["default", "hover", "focus-visible", "active", "disabled", "invalid"],
     "primitives": "Semantic HTML with Base UI behavior; colors use semantic CSS tokens."
   },
-  "palettes": [{ "id": "neutral", "name": "Neutral", "modes": ["light", "dark"], "stylesheet": "@jnpll/elements-ui/collections/alpha/palettes/neutral.css" }]
+  "palettes": [{ "id": "base", "name": "Base", "element": 1, "modes": ["light", "dark"], "stylesheet": "@jnpll/elements-ui/collections/alpha/palettes/base.css" }]
 }

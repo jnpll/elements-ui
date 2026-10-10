@@ -42,8 +42,15 @@
     "./collections/britanniae/theme.json": "./dist/collections/britanniae/theme.json",
     "./collections/britanniae/theme.css": "./dist/collections/britanniae/theme.css",
     "./collections/britanniae/palettes/*.css": "./dist/collections/britanniae/palettes/*.css",
+    "./collections/cosmo/theme.json": "./dist/collections/cosmo/theme.json",
+    "./collections/cosmo/theme.css": "./dist/collections/cosmo/theme.css",
+    "./collections/cosmo/*.svg": "./dist/collections/cosmo/*.svg",
+    "./collections/cosmo/palettes/*.css": "./dist/collections/cosmo/palettes/*.css",
+    "./collections/pantheon/theme.json": "./dist/collections/pantheon/theme.json",
+    "./collections/pantheon/theme.css": "./dist/collections/pantheon/theme.css",
+    "./collections/pantheon/palettes/*.css": "./dist/collections/pantheon/palettes/*.css",
     "./collections/alpha/theme.css": "./dist/collections/alpha/theme.css",
-    "./collections/alpha/palettes/neutral.css": "./dist/collections/alpha/palettes/neutral.css",
+    "./collections/alpha/palettes/base.css": "./dist/collections/alpha/palettes/base.css",
     "./utils": {
       "types": "./dist/lib/utils.d.ts",
       "import": "./dist/lib/utils.js"

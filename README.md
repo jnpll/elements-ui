@@ -62,15 +62,15 @@ import { Pattern } from "@jnpll/elements-ui/pattern";
 export name and `icons/alpha.svg` asset path remain stable.
 
 ```tsx
-import { alphaIcon, crown2BoldIcon } from "@jnpll/elements-ui/icons";
+import { alphaIcon, crown2BoldIcon, ringedPlanetIcon, pantheonFilledIcon } from "@jnpll/elements-ui/icons";
 
 <span style={{ maskImage: `url("${alphaIcon}")`, background: "currentColor", width: 24, height: 24 }} />
 ```
 
-Raw SVGs are also available at `@jnpll/elements-ui/icons/alpha.svg` and
-`@jnpll/elements-ui/icons/crown-2-bold.svg` for bundlers with asset support.
+Raw SVGs are also available through `@jnpll/elements-ui/icons/*.svg` for
+bundlers with asset support.
 The source SVGs remain in `src/assets/icons`; the build generates the published
-assets and URL exports. Only these two supported icons are included in this release.
+assets and URL exports. Only these four supported icons are included in this release.
 
 In the consuming app's global stylesheet:
 
@@ -97,8 +97,8 @@ this package so existing imports continue working.
 ## Switch themes and palettes
 
 Version 0.4.0 exports a shared registry, provider, hook, and selector.
-Import `@jnpll/elements-ui/themes.css` instead of `styles.css` to load Alpha and
-all Britanniae palettes, retaining the Tailwind `@source` configuration above.
+Import `@jnpll/elements-ui/themes.css` instead of `styles.css` to load Alpha,
+Britanniae, Cosmo, and Pantheon, retaining the Tailwind `@source` configuration above.
 
 ```tsx
 "use client";

@@ -8,7 +8,8 @@
     "spacingUnit": "0.25rem",
     "typography": {
       "heading": "Georgia, \"Times New Roman\", serif",
-      "sans": "Arial, Helvetica, sans-serif"
+      "body": "Georgia, \"Times New Roman\", serif",
+      "mono": "SFMono-Regular, Consolas, monospace"
     },
     "states": [
       "default",
@@ -24,7 +25,7 @@
     {
       "id": "arthur",
       "name": "Arthur",
-      "element": 2,
+      "element": 4,
       "modes": [
         "light",
         "dark"
@@ -34,7 +35,7 @@
     {
       "id": "guinevere",
       "name": "Guinevere",
-      "element": 10,
+      "element": 12,
       "modes": [
         "light",
         "dark"
@@ -44,7 +45,7 @@
     {
       "id": "merlin",
       "name": "Merlin",
-      "element": 18,
+      "element": 20,
       "modes": [
         "light",
         "dark"
@@ -52,19 +53,9 @@
       "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/merlin.css"
     },
     {
-      "id": "mordred",
-      "name": "Mordred",
-      "element": 36,
-      "modes": [
-        "light",
-        "dark"
-      ],
-      "stylesheet": "@jnpll/elements-ui/collections/britanniae/palettes/mordred.css"
-    },
-    {
       "id": "percival",
       "name": "Percival",
-      "element": 54,
+      "element": 38,
       "modes": [
         "light",
         "dark"
@@ -74,7 +65,7 @@
     {
       "id": "lancelot",
       "name": "Lancelot",
-      "element": 86,
+      "element": 56,
       "modes": [
         "light",
         "dark"
@@ -84,7 +75,7 @@
     {
       "id": "galahad",
       "name": "Galahad",
-      "element": 118,
+      "element": 88,
       "modes": [
         "light",
         "dark"

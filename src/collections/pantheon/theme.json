@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "id": "pantheon",
+  "name": "Pantheon",
+  "defaultPalette": "apollo",
+  "design": {
+    "baseRadius": "0.375rem",
+    "spacingUnit": "0.25rem",
+    "typography": {
+      "heading": "Georgia, \"Times New Roman\", serif",
+      "sans": "Arial, Helvetica, sans-serif",
+      "mono": "ui-monospace, monospace"
+    },
+    "states": [
+      "default",
+      "hover",
+      "focus-visible",
+      "active",
+      "disabled",
+      "invalid"
+    ],
+    "primitives": "Semantic HTML and Base UI; monumental headings, stone-like surfaces, and defined borders."
+  },
+  "palettes": [
+    {
+      "id": "apollo",
+      "name": "Apollo",
+      "element": 21,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/apollo.css"
+    },
+    {
+      "id": "artemis",
+      "name": "Artemis",
+      "element": 22,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/artemis.css"
+    },
+    {
+      "id": "loki",
+      "name": "Loki",
+      "element": 23,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/loki.css"
+    },
+    {
+      "id": "freya",
+      "name": "Freya",
+      "element": 24,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/freya.css"
+    },
+    {
+      "id": "ishtar",
+      "name": "Ishtar",
+      "element": 25,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/ishtar.css"
+    },
+    {
+      "id": "shiva",
+      "name": "Shiva",
+      "element": 26,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/shiva.css"
+    },
+    {
+      "id": "kali",
+      "name": "Kali",
+      "element": 27,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/kali.css"
+    },
+    {
+      "id": "hades",
+      "name": "Hades",
+      "element": 28,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/hades.css"
+    },
+    {
+      "id": "amun-ra",
+      "name": "Amun-Ra",
+      "element": 29,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/amun-ra.css"
+    },
+    {
+      "id": "anubis",
+      "name": "Anubis",
+      "element": 30,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/anubis.css"
+    },
+    {
+      "id": "osiris",
+      "name": "Osiris",
+      "element": 39,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/osiris.css"
+    },
+    {
+      "id": "horus",
+      "name": "Horus",
+      "element": 40,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/horus.css"
+    },
+    {
+      "id": "isis",
+      "name": "Isis",
+      "element": 41,
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "stylesheet": "@jnpll/elements-ui/collections/pantheon/palettes/isis.css"
+    }
+  ]
+}

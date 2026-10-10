@@ -1,12 +1,15 @@
-import { copyFile, cp, mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 
 await copyFile(new URL("../src/styles.css", import.meta.url), new URL("../dist/styles.css", import.meta.url));
 await copyFile(new URL("../src/themes.css", import.meta.url), new URL("../dist/themes.css", import.meta.url));
+await rm(new URL("../dist/collections", import.meta.url), { recursive: true, force: true });
 await cp(new URL("../src/collections", import.meta.url), new URL("../dist/collections", import.meta.url), { recursive: true });
 
 const icons = [
   { name: "alphaIcon", source: "token/atomic.svg", file: "alpha.svg" },
   { name: "crown2BoldIcon", source: "glyphs/crown-2-bold.svg", file: "crown-2-bold.svg" },
+  { name: "ringedPlanetIcon", source: "game-icons/ringed-planet.svg", file: "ringed-planet.svg" },
+  { name: "pantheonFilledIcon", source: "bitcoin-icons/pantheon-filled.svg", file: "pantheon-filled.svg" },
 ];
 await mkdir(new URL("../dist/icons/", import.meta.url), { recursive: true });
 const exports = [];

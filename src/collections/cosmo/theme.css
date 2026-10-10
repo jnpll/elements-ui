@@ -1,0 +1,131 @@
+@import "./palettes/astral.css";
+@import "./palettes/solar.css";
+@import "./palettes/lunar.css";
+@import "./palettes/nebular.css";
+@import "./palettes/quasar.css";
+@import "./palettes/pulsar.css";
+@import "./palettes/stellar.css";
+
+:root[data-elements-theme="cosmo"] {
+  --radius: 1rem;
+  --elements-font-sans: "Space Grotesk", "Avenir Next", Arial, sans-serif;
+  --elements-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --elements-font-heading: var(--elements-font-sans);
+  --cosmo-glass: color-mix(in srgb, var(--card) 84%, transparent);
+  --cosmo-glass-deep: color-mix(in srgb, var(--card) 72%, transparent);
+  --cosmo-glass-edge: color-mix(in srgb, var(--border) 70%, var(--primary) 30%);
+  --cosmo-glass-glint: color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+:root[data-elements-theme="cosmo"].dark {
+  --cosmo-glass: color-mix(in srgb, var(--card) 76%, transparent);
+  --cosmo-glass-deep: color-mix(in srgb, var(--card) 64%, transparent);
+  --cosmo-glass-glint: color-mix(in srgb, var(--primary) 9%, transparent);
+}
+
+[data-elements-theme="cosmo"] body {
+  background-image:
+    url("./stars-light.svg"),
+    radial-gradient(ellipse 65% 32% at 50% 0%, color-mix(in srgb, var(--primary) 9%, transparent), transparent 80%),
+    radial-gradient(ellipse 38% 26% at 100% 70%, color-mix(in srgb, var(--chart-2) 7%, transparent), transparent 85%);
+  background-size: 1500px 900px, auto, auto;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-attachment: fixed, scroll, scroll;
+  animation: cosmo-star-drift 180s linear infinite;
+}
+
+[data-elements-theme="cosmo"].dark body {
+  background-image:
+    url("./stars-dark.svg"),
+    radial-gradient(ellipse 65% 32% at 50% 0%, color-mix(in srgb, var(--primary) 9%, transparent), transparent 80%),
+    radial-gradient(ellipse 38% 26% at 100% 70%, color-mix(in srgb, var(--chart-2) 7%, transparent), transparent 85%);
+}
+
+@keyframes cosmo-star-drift {
+  to { background-position: 0 -900px, 0 0, 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-elements-theme="cosmo"] body { animation: none; }
+}
+
+.cosmo-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+[data-elements-theme="cosmo"] body:has(.cosmo-backdrop[data-ready="true"]) {
+  animation: none;
+}
+
+[data-elements-theme="cosmo"] :is(h1, h2, h3, [data-slot="card-title"], [data-slot="dialog-title"]) {
+  font-family: var(--elements-font-heading);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+[data-elements-theme="cosmo"] :is(.eyebrow, [data-slot="badge"], [data-slot="tabs-trigger"]) {
+  font-family: var(--elements-font-mono);
+  letter-spacing: 0.1em;
+}
+
+[data-elements-theme="cosmo"] :is([data-slot="button"], [data-slot="input"], [data-slot="select-trigger"], [data-slot="tabs-list"]) {
+  border-radius: 0.75rem;
+}
+
+[data-elements-theme="cosmo"] :is([data-slot="card"], [data-slot="alert"], [data-slot="popover-content"], [data-slot="dialog-content"], [data-slot="dropdown-menu-content"], [data-slot="dropdown-menu-sub-content"], [data-slot="select-content"], [data-slot="sheet-content"], [data-slot="hover-card-content"], [data-slot="tooltip-content"]) {
+  border: 1px solid var(--cosmo-glass-edge);
+  border-radius: 1.25rem;
+  background: linear-gradient(155deg,
+    var(--cosmo-glass-glint), transparent 44%),
+    var(--cosmo-glass);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 45%),
+    0 20px 48px -28px color-mix(in srgb, var(--primary) 32%, transparent);
+}
+
+[data-elements-theme="cosmo"].dark :is([data-slot="card"], [data-slot="alert"], [data-slot="popover-content"], [data-slot="dialog-content"], [data-slot="dropdown-menu-content"], [data-slot="dropdown-menu-sub-content"], [data-slot="select-content"], [data-slot="sheet-content"], [data-slot="hover-card-content"], [data-slot="tooltip-content"]) {
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 9%),
+    0 24px 56px -28px rgb(0 0 0 / 65%),
+    0 12px 40px -30px color-mix(in srgb, var(--primary) 45%, transparent);
+}
+
+[data-elements-theme="cosmo"] [data-slot="tooltip-content"] {
+  color: var(--card-foreground);
+}
+
+[data-elements-theme="cosmo"] [data-slot="tooltip-arrow"] {
+  background-color: var(--card);
+  fill: var(--card);
+}
+
+[data-elements-theme="cosmo"] [data-theme-picker] {
+  background: linear-gradient(155deg, var(--cosmo-glass-glint), transparent 48%), color-mix(in srgb, var(--card) 96%, transparent);
+  backdrop-filter: blur(30px) saturate(135%);
+  -webkit-backdrop-filter: blur(30px) saturate(135%);
+}
+
+[data-elements-theme="cosmo"] :is([data-slot="input"], [data-slot="textarea"], [data-slot="select-trigger"], [data-slot="tabs-list"], [data-slot="button"][data-variant="outline"]) {
+  border-color: var(--cosmo-glass-edge);
+  background-color: var(--cosmo-glass-deep);
+  backdrop-filter: blur(12px) saturate(125%);
+  -webkit-backdrop-filter: blur(12px) saturate(125%);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+
+[data-elements-theme="cosmo"] :is([data-slot="sidebar-inner"], [data-slot="sidebar-inset"]) {
+  background: var(--cosmo-glass);
+  backdrop-filter: blur(18px) saturate(130%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+}
+
+[data-elements-theme="cosmo"] [data-slot="button"]:is(:hover, :focus-visible) {
+  box-shadow: 0 8px 24px -14px color-mix(in srgb, var(--primary) 55%, transparent);
+}

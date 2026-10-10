@@ -1,4 +1,4 @@
-@import "./palettes/neutral.css";
+@import "./palettes/base.css";
 
 :root {
   --radius: 0.75rem;

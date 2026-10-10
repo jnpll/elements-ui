@@ -6,8 +6,15 @@
   Source: https://github.com/0xa3k5/web3icons
 - `crown-2-bold.svg`: Glyphs by Goran Spasojevic, MIT.
   Source: https://github.com/gorango/glyphs
+- `ringed-planet.svg`: Ringed planet by Lorc, CC BY 3.0.
+  Source: https://game-icons.net/1x1/lorc/ringed-planet.html
+  License: https://creativecommons.org/licenses/by/3.0/
+- `pantheon-filled.svg`: Bitcoin Icons by Bitcoin Design, MIT.
+  Source: https://github.com/BitcoinDesign/Bitcoin-Icons
+  License: https://github.com/BitcoinDesign/Bitcoin-Icons/blob/main/LICENSE-MIT
 
-Full icon license texts are included in `LICENSES/`.
+License texts for the earlier icon sets are included in `LICENSES/`;
+the Cosmo and Pantheon icon licenses are linked above.
 
 ## Components
 

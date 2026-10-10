@@ -1,5 +1,7 @@
 import alpha from "../collections/alpha/theme.json" with { type: "json" };
 import britanniae from "../collections/britanniae/theme.json" with { type: "json" };
+import cosmo from "../collections/cosmo/theme.json" with { type: "json" };
+import pantheon from "../collections/pantheon/theme.json" with { type: "json" };
 
 export interface ElementsPalette {
   id: string;
@@ -15,8 +17,8 @@ export interface ElementsTheme {
   palettes: readonly ElementsPalette[];
 }
 export interface ElementsThemeSelection { theme: string; palette: string }
-export const elementsThemes: readonly ElementsTheme[] = [alpha, britanniae];
-export const defaultThemeSelection: ElementsThemeSelection = { theme: "alpha", palette: "neutral" };
+export const elementsThemes: readonly ElementsTheme[] = [alpha, britanniae, cosmo, pantheon];
+export const defaultThemeSelection: ElementsThemeSelection = { theme: "alpha", palette: "base" };
 export const elementsThemeStorageKey = "elements-design-selection";
 
 export function resolveThemeSelection(
@@ -30,6 +32,6 @@ export function resolveThemeSelection(
   if (!theme || !theme.palettes.some(palette => palette.id === theme.defaultPalette)) {
     throw new Error("An Elements theme registry must contain themes with valid default palettes.");
   }
-  const palette = selected ? candidate.palette : fallback.palette;
+  const palette = selected ? candidate.palette === "neutral" && theme.id === "alpha" ? "base" : candidate.palette : fallback.palette;
   return { theme: theme.id, palette: theme.palettes.some(item => item.id === palette) ? palette! : theme.defaultPalette };
 }
