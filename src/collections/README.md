@@ -2,9 +2,9 @@
 
 Each folder is a design style. `alpha` is the original Elements theme.
 
-`britanniae` is a serif-led, crafted theme with Arthur, Guinevere, Merlin,
-Percival, Lancelot, and Galahad palettes across the six alkaline earth metal
-tiles. Alpha remains at Hydrogen.
+`britanniae` is a serif-led, crafted theme with a subtle paper-grain background.
+Its Arthur, Guinevere, Merlin, Percival, Lancelot, and Galahad palettes occupy
+the six alkaline earth metal tiles. Alpha remains at Hydrogen.
 
 `cosmo` uses all seven noble-gas tiles for Astral, Solar, Lunar, Nebular,
 Quasar, Pulsar, and Stellar. Its geometric headings, mono labels, translucent

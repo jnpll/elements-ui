@@ -11,6 +11,24 @@
   --elements-font-mono: "SFMono-Regular", Consolas, monospace;
   --elements-font-heading: Georgia, "Times New Roman", serif;
 }
+[data-elements-theme="britanniae"] body {
+  background-image:
+    url("./paper-grain.svg"),
+    radial-gradient(ellipse at 50% 38%, transparent 52%, rgb(97 70 42 / 6%) 100%),
+    radial-gradient(ellipse at 18% 8%, rgb(191 157 91 / 10%), transparent 58%),
+    linear-gradient(115deg, rgb(255 255 255 / 4%), transparent 55%);
+  background-size: 256px 256px, cover, cover, cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply, normal, normal, normal;
+}
+[data-elements-theme="britanniae"].dark body {
+  background-image:
+    url("./paper-grain.svg"),
+    radial-gradient(ellipse at 50% 38%, transparent 52%, rgb(0 0 0 / 9%) 100%),
+    radial-gradient(ellipse at 18% 8%, rgb(191 157 91 / 6%), transparent 58%);
+  background-size: 256px 256px, cover, cover;
+  background-blend-mode: screen, normal, normal;
+}
 [data-elements-theme="britanniae"] :is(h1, h2, h3, [data-slot="card-title"]) {
   font-family: var(--elements-font-heading);
   font-weight: 500;

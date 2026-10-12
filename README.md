@@ -26,7 +26,7 @@ has `read:packages`, then install the version you want:
 
 ```sh
 npm login --scope=@jnpll --auth-type=legacy --registry=https://npm.pkg.github.com
-npm install @jnpll/elements-ui@0.4.0
+npm install @jnpll/elements-ui@0.4.1
 ```
 
 Keep credentials in your local npm configuration or CI secrets, not in source.
@@ -171,6 +171,9 @@ to `src/index.ts`, and install any required runtime dependencies here. Exported
 component files are available as `@jnpll/elements-ui/<name>` after building.
 
 ## Release
+
+Version 0.4.1 adds the Cosmo and Pantheon collections and a subtle paper-grain
+surface to Britanniae. The Britanniae texture asset is exported for consumers.
 
 Version 0.4.0 adds reusable theme switching and Pattern, updates the Alpha icon
 and Britanniae palettes, and derives glow effects from primary/secondary tokens.

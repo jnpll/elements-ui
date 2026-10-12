@@ -91,6 +91,7 @@ for (const palette of britanniae.palettes) {
   }
 }
 await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/britanniae/theme.css")), "utf8");
+await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/britanniae/paper-grain.svg")), "utf8");
 for (const [id, elements] of [["cosmo", [2, 10, 18, 36, 54, 86, 118]], ["pantheon", [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 39, 40, 41]]]) {
   const theme = JSON.parse(await readFile(new URL(import.meta.resolve(`@jnpll/elements-ui/collections/${id}/theme.json`)), "utf8"));
   assert.deepEqual(theme.palettes.map(palette => palette.element), elements);

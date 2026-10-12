@@ -1,6 +1,6 @@
 {
   "name": "@jnpll/elements-ui",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Shared Elements shadcn components and Tailwind CSS 4 theme",
   "type": "module",
   "repository": {
@@ -41,6 +41,7 @@
     "./collections/alpha/theme.json": "./dist/collections/alpha/theme.json",
     "./collections/britanniae/theme.json": "./dist/collections/britanniae/theme.json",
     "./collections/britanniae/theme.css": "./dist/collections/britanniae/theme.css",
+    "./collections/britanniae/*.svg": "./dist/collections/britanniae/*.svg",
     "./collections/britanniae/palettes/*.css": "./dist/collections/britanniae/palettes/*.css",
     "./collections/cosmo/theme.json": "./dist/collections/cosmo/theme.json",
     "./collections/cosmo/theme.css": "./dist/collections/cosmo/theme.css",
