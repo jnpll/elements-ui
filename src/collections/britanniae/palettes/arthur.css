@@ -15,7 +15,7 @@
   --accent: color-mix(in srgb, #987124, white 90%);
   --accent-foreground: var(--foreground);
   --destructive: #ae2638;
-  --border: rgb(25 30 40 / 20%);
+  --border: rgb(151 113 36 / 26%);
   --input: var(--border);
   --ring: #a52b37;
   --chart-1: var(--primary);
@@ -49,7 +49,7 @@
   --accent: color-mix(in srgb, #987124, #261c1e 65%);
   --accent-foreground: var(--foreground);
   --destructive: #ffa6a6;
-  --border: rgb(255 255 255 / 22%);
+  --border: rgb(225 190 103 / 28%);
   --input: var(--border);
   --ring: #e1be67;
   --chart-1: var(--primary);

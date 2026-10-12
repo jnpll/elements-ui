@@ -84,10 +84,23 @@ for (const palette of britanniae.palettes) {
   assert.deepEqual(tokenNames(dark), expectedTokens);
   assert.ok(!css.includes("--radius:"), "Palettes must not change geometry");
   assert.doesNotMatch(css, /--glow-/, "Effects must derive colors from semantic palette tokens");
-  if (["arthur", "percival", "lancelot", "galahad"].includes(palette.id)) {
+  if (["arthur", "merlin", "percival", "lancelot", "galahad"].includes(palette.id)) {
+    assert.match(light, /--border: rgb\(151 113 36 \/ 26%\);/);
+    assert.match(dark, /--border: rgb\(225 190 103 \/ 28%\);/);
+  }
+  if (palette.id === "arthur") {
     assert.match(dark, /--primary: #e1be67;/);
-    assert.match(dark, /--ring: #e1be67;/);
-    assert.doesNotMatch(light, /--primary: #e1be67;/);
+  }
+  if (palette.id === "merlin") {
+    assert.match(dark, /--primary: #e4c65b;/);
+  }
+  if (["percival", "lancelot", "galahad"].includes(palette.id)) {
+    assert.match(dark, /--primary: #cbd2d8;/);
+    assert.match(dark, /--ring: #cbd2d8;/);
+  }
+  if (palette.id === "galahad") {
+    assert.match(light, /--primary: #4e6859;/);
+    assert.match(dark, /--background: #212b25;/);
   }
 }
 await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/britanniae/theme.css")), "utf8");

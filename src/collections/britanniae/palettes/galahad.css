@@ -1,28 +1,28 @@
-/* Britanniae / Galahad: color only; geometry belongs to the theme. */
+/* Britanniae / Galahad: weathered sage; geometry belongs to the theme. */
 :root[data-elements-theme="britanniae"][data-elements-palette="galahad"] {
-  --background: #fbfdfb;
-  --foreground: #20232a;
-  --card: #ffffff;
+  --background: #f2f4ef;
+  --foreground: #27332d;
+  --card: #fbfcf8;
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: #286449;
+  --primary: #4e6859;
   --primary-foreground: #ffffff;
-  --secondary: color-mix(in srgb, #286449, white 92%);
+  --secondary: color-mix(in srgb, #5b7565, white 88%);
   --secondary-foreground: var(--foreground);
   --muted: var(--secondary);
-  --muted-foreground: #555b66;
-  --accent: color-mix(in srgb, #397459, white 90%);
+  --muted-foreground: #5a675f;
+  --accent: color-mix(in srgb, #829b86, white 80%);
   --accent-foreground: var(--foreground);
   --destructive: #ae2638;
-  --border: rgb(25 30 40 / 20%);
+  --border: rgb(151 113 36 / 26%);
   --input: var(--border);
-  --ring: #286449;
+  --ring: #4e6859;
   --chart-1: var(--primary);
-  --chart-2: #397459;
-  --chart-3: #68788d;
-  --chart-4: #87998e;
-  --chart-5: #9c856b;
+  --chart-2: #718d78;
+  --chart-3: #8b9f92;
+  --chart-4: #9aaa9e;
+  --chart-5: #a49c86;
   --sidebar: var(--card);
   --sidebar-foreground: var(--foreground);
   --sidebar-primary: var(--primary);
@@ -34,29 +34,29 @@
 }
 
 :root[data-elements-theme="britanniae"][data-elements-palette="galahad"].dark {
-  --background: #182920;
-  --foreground: #f5f4f7;
-  --card: color-mix(in srgb, #182920, white 5%);
+  --background: #212b25;
+  --foreground: #e9efe9;
+  --card: color-mix(in srgb, #212b25, white 6%);
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: #e1be67;
-  --primary-foreground: #182920;
-  --secondary: color-mix(in srgb, #182920, white 12%);
+  --primary: #cbd2d8;
+  --primary-foreground: #212b25;
+  --secondary: color-mix(in srgb, #212b25, white 11%);
   --secondary-foreground: var(--foreground);
   --muted: var(--secondary);
-  --muted-foreground: #c0c3cd;
-  --accent: color-mix(in srgb, #397459, #182920 65%);
+  --muted-foreground: #bac8bd;
+  --accent: color-mix(in srgb, #789683, #212b25 55%);
   --accent-foreground: var(--foreground);
   --destructive: #ffa6a6;
-  --border: rgb(255 255 255 / 22%);
+  --border: rgb(225 190 103 / 28%);
   --input: var(--border);
-  --ring: #e1be67;
+  --ring: #cbd2d8;
   --chart-1: var(--primary);
-  --chart-2: #9bcdb2;
-  --chart-3: #a5b4c6;
-  --chart-4: #c9c4d2;
-  --chart-5: #e0ddd5;
+  --chart-2: #94af9b;
+  --chart-3: #7d9a86;
+  --chart-4: #c3d3c5;
+  --chart-5: #c5bda6;
   --sidebar: var(--card);
   --sidebar-foreground: var(--foreground);
   --sidebar-primary: var(--primary);

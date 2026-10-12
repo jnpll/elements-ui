@@ -15,7 +15,7 @@
   --accent: color-mix(in srgb, #59636e, white 90%);
   --accent-foreground: var(--foreground);
   --destructive: #ae2638;
-  --border: rgb(25 30 40 / 20%);
+  --border: rgb(151 113 36 / 26%);
   --input: var(--border);
   --ring: #505963;
   --chart-1: var(--primary);
@@ -40,7 +40,7 @@
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: #e1be67;
+  --primary: #cbd2d8;
   --primary-foreground: #20252c;
   --secondary: color-mix(in srgb, #20252c, white 12%);
   --secondary-foreground: var(--foreground);
@@ -49,9 +49,9 @@
   --accent: color-mix(in srgb, #59636e, #20252c 65%);
   --accent-foreground: var(--foreground);
   --destructive: #ffa6a6;
-  --border: rgb(255 255 255 / 22%);
+  --border: rgb(225 190 103 / 28%);
   --input: var(--border);
-  --ring: #e1be67;
+  --ring: #cbd2d8;
   --chart-1: var(--primary);
   --chart-2: #c6cbd2;
   --chart-3: #a5b4c6;
