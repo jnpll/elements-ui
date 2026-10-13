@@ -1,23 +1,23 @@
 /* Britanniae / Arthur: color only; geometry belongs to the theme. */
 :root[data-elements-theme="britanniae"][data-elements-palette="arthur"] {
-  --background: #fafafb;
-  --foreground: #20232a;
-  --card: #ffffff;
+  --background: #fbf7f6;
+  --foreground: #2d2227;
+  --card: #fffdfc;
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: #a52b37;
+  --primary: #ad3040;
   --primary-foreground: #ffffff;
-  --secondary: color-mix(in srgb, #a52b37, white 92%);
+  --secondary: color-mix(in srgb, #ad3040, white 90%);
   --secondary-foreground: var(--foreground);
   --muted: var(--secondary);
-  --muted-foreground: #555b66;
-  --accent: color-mix(in srgb, #987124, white 90%);
+  --muted-foreground: #645b5f;
+  --accent: color-mix(in srgb, #a3404d, white 88%);
   --accent-foreground: var(--foreground);
   --destructive: #ae2638;
   --border: rgb(151 113 36 / 26%);
   --input: var(--border);
-  --ring: #a52b37;
+  --ring: #ad3040;
   --chart-1: var(--primary);
   --chart-2: #987124;
   --chart-3: #68788d;
@@ -34,24 +34,24 @@
 }
 
 :root[data-elements-theme="britanniae"][data-elements-palette="arthur"].dark {
-  --background: #261c1e;
+  --background: #2b171e;
   --foreground: #f5f4f7;
-  --card: color-mix(in srgb, #261c1e, white 5%);
+  --card: color-mix(in srgb, #2b171e, white 5%);
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-  --primary: #e1be67;
-  --primary-foreground: #261c1e;
-  --secondary: color-mix(in srgb, #261c1e, white 12%);
+  --primary: #dd8791;
+  --primary-foreground: #2b171e;
+  --secondary: color-mix(in srgb, #2b171e, white 12%);
   --secondary-foreground: var(--foreground);
   --muted: var(--secondary);
-  --muted-foreground: #c0c3cd;
-  --accent: color-mix(in srgb, #987124, #261c1e 65%);
+  --muted-foreground: #cbbec3;
+  --accent: color-mix(in srgb, #a3404d, #2b171e 58%);
   --accent-foreground: var(--foreground);
   --destructive: #ffa6a6;
   --border: rgb(225 190 103 / 28%);
   --input: var(--border);
-  --ring: #e1be67;
+  --ring: #dd8791;
   --chart-1: var(--primary);
   --chart-2: #e1be67;
   --chart-3: #a5b4c6;

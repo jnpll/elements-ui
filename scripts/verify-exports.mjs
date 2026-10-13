@@ -89,7 +89,9 @@ for (const palette of britanniae.palettes) {
     assert.match(dark, /--border: rgb\(225 190 103 \/ 28%\);/);
   }
   if (palette.id === "arthur") {
-    assert.match(dark, /--primary: #e1be67;/);
+    assert.match(light, /--primary: #ad3040;/);
+    assert.match(dark, /--primary: #dd8791;/);
+    assert.match(dark, /--background: #2b171e;/);
   }
   if (palette.id === "merlin") {
     assert.match(dark, /--primary: #e4c65b;/);
