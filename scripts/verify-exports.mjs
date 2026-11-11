@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readdir, readFile } from "node:fs/promises";
 import { createElement } from "react";
+import { runInNewContext } from "node:vm";
 import { renderToStaticMarkup } from "react-dom/server";
 
 const files = (await readdir(new URL("../dist/components/", import.meta.url))).filter((file) => file.endsWith(".js"));
@@ -23,6 +24,14 @@ assert.equal(typeof themeAPI.getElementsThemeScript(), "string");
 assert.deepEqual(themeAPI.resolveThemeSelection({ theme: "britanniae", palette: "merlin" }), { theme: "britanniae", palette: "merlin" });
 assert.deepEqual(themeAPI.resolveThemeSelection({ theme: "cosmo", palette: "astral" }), { theme: "cosmo", palette: "astral" });
 assert.deepEqual(themeAPI.resolveThemeSelection({ theme: "pantheon", palette: "isis" }), { theme: "pantheon", palette: "isis" });
+assert.deepEqual(themeAPI.resolveThemeSelection({ theme: "portfolio", palette: "base" }), { theme: "alpha", palette: "001" });
+assert.deepEqual(themeAPI.resolveThemeSelection({ theme: "alpha", palette: "base" }), { theme: "alpha", palette: "000" });
+for (const [stored, expectedPalette] of [[{ theme: "alpha", palette: "base" }, "000"], [{ theme: "portfolio", palette: "base" }, "001"]]) {
+  const document = { documentElement: { dataset: {} } };
+  runInNewContext(themeAPI.getElementsThemeScript(), { document, localStorage: { getItem: () => JSON.stringify(stored) } });
+  assert.equal(document.documentElement.dataset.elementsTheme, "alpha");
+  assert.equal(document.documentElement.dataset.elementsPalette, expectedPalette);
+}
 assert.match(await readFile(new URL("../dist/themes/provider.js", import.meta.url), "utf8"), /^"use client"/);
 await readFile(new URL("../dist/themes/index.d.ts", import.meta.url));
 assert.match(await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/themes.css")), "utf8"), /britanniae\/theme.css/);
@@ -56,25 +65,34 @@ const hooks = await import("@jnpll/elements-ui/hooks/use-mobile");
 assert.equal(typeof hooks.useIsMobile, "function");
 const alpha = JSON.parse(await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/alpha/theme.json")), "utf8"));
 assert.equal(alpha.id, "alpha");
-assert.equal(alpha.defaultPalette, "base");
-assert.equal(alpha.palettes[0].element, 1);
-assert.deepEqual(themeAPI.resolveThemeSelection({ theme: "alpha", palette: "neutral" }), { theme: "alpha", palette: "base" });
+assert.equal(alpha.defaultPalette, "000");
+assert.deepEqual(alpha.palettes.map(palette => palette.element), [1, 8]);
+assert.deepEqual(themeAPI.resolveThemeSelection({ theme: "alpha", palette: "neutral" }), { theme: "alpha", palette: "000" });
 assert.ok(alpha.palettes.some(palette => palette.id === alpha.defaultPalette));
 for (const palette of alpha.palettes) {
   const css = await readFile(new URL(import.meta.resolve(palette.stylesheet)), "utf8");
-  assert.match(css, /:root\s*\{/);
+  assert.match(css, /:root[^\n]*\{/);
   assert.match(css, /\.dark\s*\{/);
-  const [light, dark] = css.split(".dark {");
+  const [light, dark] = css.split(/\n(?::root[^\n]*)?\.dark\s*\{/);
   const tokens = source => [...source.matchAll(/(--[\w-]+):/g)].map(match => match[1]).sort();
   assert.deepEqual(tokens(light), tokens(dark), "Palette modes must define the same semantic tokens");
   assert.ok(!css.includes("--radius:"), "Palettes must not change theme geometry");
 }
-await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/alpha/theme.css")), "utf8");
+const alphaThemeCSS = await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/alpha/theme.css")), "utf8");
+assert.match(alphaThemeCSS, /\[data-elements-palette="001"\]/);
+assert.match(alphaThemeCSS, /backdrop-filter: blur\(26px\)/);
+const alpha001 = await readFile(new URL(import.meta.resolve(alpha.palettes[1].stylesheet)), "utf8");
+assert.doesNotMatch(alpha001, /#(?:f5f3ed|508df9|ed65aa|50e6d2|b99839)/i);
+assert.match(alpha001, /--destructive: #ae2638;/);
+assert.match(alpha001, /\.dark\s*\{\s*--background: #000;/);
+assert.match(alphaThemeCSS, /\.dark body\s*\{\s*background-image: none;/);
+await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/alpha/palettes/base.css")), "utf8");
 const britanniae = JSON.parse(await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/britanniae/theme.json")), "utf8"));
 assert.equal(britanniae.palettes.length, 6);
 assert.deepEqual(britanniae.palettes.map(palette => palette.element), [4, 12, 20, 38, 56, 88]);
 const tokenNames = source => [...source.matchAll(/(--[\w-]+):/g)].map(match => match[1]).sort();
 const alphaCSS = await readFile(new URL(import.meta.resolve(alpha.palettes[0].stylesheet)), "utf8");
+assert.match(alphaCSS, /\.dark\s*\{\s*--background: #000;/);
 const expectedTokens = tokenNames(alphaCSS.split(".dark {")[0]);
 for (const palette of britanniae.palettes) {
   const css = await readFile(new URL(import.meta.resolve(palette.stylesheet)), "utf8");

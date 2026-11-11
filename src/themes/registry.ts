@@ -18,7 +18,7 @@ export interface ElementsTheme {
 }
 export interface ElementsThemeSelection { theme: string; palette: string }
 export const elementsThemes: readonly ElementsTheme[] = [alpha, britanniae, cosmo, pantheon];
-export const defaultThemeSelection: ElementsThemeSelection = { theme: "alpha", palette: "base" };
+export const defaultThemeSelection: ElementsThemeSelection = { theme: "alpha", palette: "000" };
 export const elementsThemeStorageKey = "elements-design-selection";
 
 export function resolveThemeSelection(
@@ -26,12 +26,17 @@ export function resolveThemeSelection(
   themes: readonly ElementsTheme[] = elementsThemes,
   fallback: ElementsThemeSelection = defaultThemeSelection,
 ): ElementsThemeSelection {
-  const candidate = typeof value === "object" && value !== null ? value as Partial<ElementsThemeSelection> : {};
+  const original = typeof value === "object" && value !== null ? value as Partial<ElementsThemeSelection> : {};
+  const candidate = original.theme === "portfolio" && original.palette === "base" && !themes.some(theme => theme.id === "portfolio")
+    ? { theme: "alpha", palette: "001" }
+    : original.theme === "alpha" && (original.palette === "base" || original.palette === "neutral")
+      ? { theme: "alpha", palette: "000" }
+      : original;
   const selected = themes.find(theme => theme.id === candidate.theme);
   const theme = selected ?? themes.find(theme => theme.id === fallback.theme) ?? themes[0];
   if (!theme || !theme.palettes.some(palette => palette.id === theme.defaultPalette)) {
     throw new Error("An Elements theme registry must contain themes with valid default palettes.");
   }
-  const palette = selected ? candidate.palette === "neutral" && theme.id === "alpha" ? "base" : candidate.palette : fallback.palette;
+  const palette = selected ? candidate.palette : fallback.palette;
   return { theme: theme.id, palette: theme.palettes.some(item => item.id === palette) ? palette! : theme.defaultPalette };
 }

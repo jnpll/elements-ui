@@ -164,3 +164,48 @@
 @media (prefers-reduced-motion: reduce) {
   .text-gradient { animation: none !important; }
 }
+
+/* Joined controls keep their seams and outer corners in every collection. */
+:root {
+  --elements-button-group-radius: 0.5rem;
+  --elements-button-group-shadow: none;
+}
+
+[data-slot="button-group"]:not(:has(> [data-slot="button-group"])) {
+  border-radius: var(--elements-button-group-radius);
+  box-shadow: var(--elements-button-group-shadow);
+}
+
+[data-slot="button-group"] > [data-slot]:not([data-slot="button-group"]):not([data-slot="button-group-separator"]) {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+[data-slot="button-group"][data-orientation="horizontal"] > [data-slot]:first-child {
+  border-start-start-radius: var(--elements-button-group-radius) !important;
+  border-end-start-radius: var(--elements-button-group-radius) !important;
+}
+
+[data-slot="button-group"][data-orientation="horizontal"] > [data-slot]:last-child {
+  border-start-end-radius: var(--elements-button-group-radius) !important;
+  border-end-end-radius: var(--elements-button-group-radius) !important;
+}
+
+[data-slot="button-group"][data-orientation="horizontal"] > [data-slot] ~ [data-slot] {
+  border-inline-start-width: 0 !important;
+}
+
+[data-slot="button-group"][data-orientation="vertical"] > [data-slot]:first-child {
+  border-start-start-radius: var(--elements-button-group-radius) !important;
+  border-start-end-radius: var(--elements-button-group-radius) !important;
+}
+
+[data-slot="button-group"][data-orientation="vertical"] > [data-slot]:last-child {
+  border-end-start-radius: var(--elements-button-group-radius) !important;
+  border-end-end-radius: var(--elements-button-group-radius) !important;
+}
+
+[data-slot="button-group"][data-orientation="vertical"] > [data-slot] ~ [data-slot] {
+  border-block-start-width: 0 !important;
+}

@@ -8,6 +8,7 @@
 
 :root[data-elements-theme="cosmo"] {
   --radius: 1rem;
+  --elements-button-group-radius: 0.75rem;
   --elements-font-sans: "Space Grotesk", "Avenir Next", Arial, sans-serif;
   --elements-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
   --elements-font-heading: var(--elements-font-sans);
@@ -73,7 +74,7 @@
   letter-spacing: 0.1em;
 }
 
-[data-elements-theme="cosmo"] :is([data-slot="button"], [data-slot="input"], [data-slot="select-trigger"], [data-slot="tabs-list"]) {
+[data-elements-theme="cosmo"] :is([data-elements-button], [data-slot="input"], [data-slot="select-trigger"], [data-slot="tabs-list"]) {
   border-radius: 0.75rem;
 }
 

@@ -2,15 +2,22 @@
   "schemaVersion": 1,
   "id": "alpha",
   "name": "Alpha",
-  "defaultPalette": "base",
+  "defaultPalette": "000",
   "design": {
     "baseRadius": "0.75rem",
     "radiusScale": { "sm": 0.6, "md": 0.8, "lg": 1, "xl": 1.4 },
     "spacingUnit": "0.25rem",
     "typography": { "sans": "system-ui, sans-serif", "mono": "ui-monospace, monospace" },
     "controlHeights": { "xs": "1.5rem", "sm": "1.75rem", "default": "2rem", "lg": "2.25rem" },
+    "paletteTreatments": {
+      "000": "Flat monochrome controls and surfaces with a 0.75rem base radius.",
+      "001": "Neutral glass surfaces, pill controls, and a 1rem base radius."
+    },
     "states": ["default", "hover", "focus-visible", "active", "disabled", "invalid"],
-    "primitives": "Semantic HTML with Base UI behavior; colors use semantic CSS tokens."
+    "primitives": "Semantic HTML and Base UI with neutral monochrome palettes. 000 is flat; 001 adds Apple-like glass material and pill controls. Only destructive actions use red."
   },
-  "palettes": [{ "id": "base", "name": "Base", "element": 1, "modes": ["light", "dark"], "stylesheet": "@jnpll/elements-ui/collections/alpha/palettes/base.css" }]
+  "palettes": [
+    { "id": "000", "name": "000", "element": 1, "modes": ["light", "dark"], "stylesheet": "@jnpll/elements-ui/collections/alpha/palettes/000.css" },
+    { "id": "001", "name": "001", "element": 8, "modes": ["light", "dark"], "stylesheet": "@jnpll/elements-ui/collections/alpha/palettes/001.css" }
+  ]
 }

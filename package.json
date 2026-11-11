@@ -51,6 +51,7 @@
     "./collections/pantheon/theme.css": "./dist/collections/pantheon/theme.css",
     "./collections/pantheon/palettes/*.css": "./dist/collections/pantheon/palettes/*.css",
     "./collections/alpha/theme.css": "./dist/collections/alpha/theme.css",
+    "./collections/alpha/palettes/*.css": "./dist/collections/alpha/palettes/*.css",
     "./collections/alpha/palettes/base.css": "./dist/collections/alpha/palettes/base.css",
     "./utils": {
       "types": "./dist/lib/utils.d.ts",
