@@ -11,10 +11,10 @@
     "controlHeights": { "xs": "1.5rem", "sm": "1.75rem", "default": "2rem", "lg": "2.25rem" },
     "paletteTreatments": {
       "000": "Flat monochrome controls and surfaces with a 0.75rem base radius.",
-      "001": "Neutral glass surfaces, pill controls, and a 1rem base radius."
+      "001": "Quiet neutral surfaces, rounded controls, and a 0.875rem base radius."
     },
     "states": ["default", "hover", "focus-visible", "active", "disabled", "invalid"],
-    "primitives": "Semantic HTML and Base UI with neutral monochrome palettes. 000 is flat; 001 adds Apple-like glass material and pill controls. Only destructive actions use red."
+    "primitives": "Semantic HTML and Base UI with neutral monochrome palettes. 000 is flat; 001 uses restrained translucent surfaces and rounded controls. Only destructive actions use red."
   },
   "palettes": [
     { "id": "000", "name": "000", "element": 1, "modes": ["light", "dark"], "stylesheet": "@jnpll/elements-ui/collections/alpha/palettes/000.css" },

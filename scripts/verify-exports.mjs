@@ -80,7 +80,9 @@ for (const palette of alpha.palettes) {
 }
 const alphaThemeCSS = await readFile(new URL(import.meta.resolve("@jnpll/elements-ui/collections/alpha/theme.css")), "utf8");
 assert.match(alphaThemeCSS, /\[data-elements-palette="001"\]/);
-assert.match(alphaThemeCSS, /backdrop-filter: blur\(26px\)/);
+assert.match(alphaThemeCSS, /backdrop-filter: blur\(16px\)/);
+assert.match(alphaThemeCSS, /data-size=\"icon\"/);
+assert.match(alphaThemeCSS, /--alpha-primary-fill: linear-gradient\(180deg, #fff, #e8e8e8\)/);
 const alpha001 = await readFile(new URL(import.meta.resolve(alpha.palettes[1].stylesheet)), "utf8");
 assert.doesNotMatch(alpha001, /#(?:f5f3ed|508df9|ed65aa|50e6d2|b99839)/i);
 assert.match(alpha001, /--destructive: #ae2638;/);

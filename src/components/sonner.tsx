@@ -1,13 +1,25 @@
 "use client"
 
+import { useSyncExternalStore } from "react"
 import { Toaster as Sonner, type ToasterProps } from "sonner"
 import { CircleCheckIcon, InfoIcon, TriangleAlertIcon, OctagonXIcon, Loader2Icon } from "lucide-react"
 
-const Toaster = ({ theme = "system", ...props }: ToasterProps) => {
+function subscribeToAppearance(onChange: () => void) {
+  const observer = new MutationObserver(onChange)
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] })
+  return () => observer.disconnect()
+}
+
+function getAppearance(): "light" | "dark" {
+  return document.documentElement.classList.contains("dark") ? "dark" : "light"
+}
+
+const Toaster = ({ theme, ...props }: ToasterProps) => {
+  const appearance = useSyncExternalStore(subscribeToAppearance, getAppearance, () => "light" as const)
 
   return (
     <Sonner
-      theme={theme as ToasterProps["theme"]}
+      theme={theme ?? appearance}
       className="toaster group"
       icons={{
         success: (
